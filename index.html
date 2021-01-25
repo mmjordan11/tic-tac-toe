@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="reset.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+  <header>
+    <h1>Tic-Tac-Toe</h1>
+  </header>
+  <form id="controller">
+    <div data-playerNum=1>
+      <input type="text" id="js__p1-name" name="name" value="Player 1">
+      <!-- <fieldset>
+        <legend>Type:</legend>
+        <input type="radio" id="human1" name="js__p1-type" value="human" checked>
+        <label for="human1">Human</label>
+        <input type="radio" id="ai1" name="js__p1-type" value="AI">
+        <label for="ai1">AI</label>
+      </fieldset> -->
+    </div>
+    <div data-playerNum=2>
+      <input type="text" id="js__p2-name" name="name" value="Player 2">
+      <!-- <fieldset>
+        <legend>Type:</legend>
+        <input type="radio" id="human2" name="js__p2-type" value="human" checked>
+        <label for="human2">Human</label>
+        <input type="radio" id="ai2" name="js__p2-type" value="AI">
+        <label for="ai2">AI</label>
+      </fieldset> -->
+    </div>
+    <div class="flex-break"></div>
+    <button type="button" id="js-new-game-btn">New Game</button>
+  </form>
+  <div id="gameboard"></div>
+  <div id="js-win-message" style="display: none">
+    <p id="winner"></p>
+  </div>
+  <footer>
+    <p>Created by <a href="https://github.com/mmjordan11">Matt Jordan</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

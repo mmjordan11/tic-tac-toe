@@ -1,0 +1,135 @@
+:root {
+  --gridSize: calc(min(45vw,45vh));
+  --bgColor: #E5E5E5;
+  --textColor: #000000;
+  --player1Color: #14213D;
+  --player2Color: #FCA311;
+  --accent: #FFFFFF;
+  --font: "verdana";
+}
+
+html {
+  font-family: var(--font);
+}
+
+body{
+  background-color: var(--bgColor);
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom right, var(--player1Color) 70%, var(--player2Color));
+  width: 100vw;
+  height: 10vh;
+  margin-bottom: 2.5vh;
+  border-radius: 0 0 25vw 25vw/ 0 0 20px 20px;
+}
+h1 {
+  font-size: 3em;
+  color: var(--bgColor);
+  text-outline: 5px solid linear-gradient(to bottom right, var(--player1Color) 60%, var(--accent));
+  margin: 0;
+  vertical-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#controller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 5vh;
+}
+
+input, button {
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--accent);
+  border-radius: 25px;
+  height: 50px;
+  width: 20vw;
+  padding: 0;
+}
+
+#js__p1-name {
+  background-color: var(--player1Color);
+}
+
+#js__p2-name {
+  background-color: var(--player2Color);
+}
+
+#js-new-game-btn {
+  color: var(--textColor);
+  background-color: var(--accent);
+}
+
+#gameboard {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  outline: 6px solid var(--bgColor);
+  outline-offset: -3px;
+  width: var(--gridSize);
+  height: var(--gridSize);
+  margin: auto;
+}
+.cell {
+  border: 3px solid black;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+}
+
+.cell:hover {
+  color: var(--textColor);
+  background-color: var(--accent);
+}
+
+.p1 {
+  color: var(--accent);
+  background-color: var(--player1Color);
+}
+
+.p2 {
+  color: var(--accent);
+  background-color: var(--player2Color);
+}
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+#js-win-message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 3em;
+}
+
+footer {
+  color: var(--accent);
+  background: linear-gradient(to bottom right, var(--player1Color) 60%, var(--player2Color));
+  position: absolute;
+  top: 100vh;
+  transform: translateY(-100%);
+  width: 100vw;
+  height: 5vh;
+}
